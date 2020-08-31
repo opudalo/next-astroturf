@@ -1,3 +1,18 @@
+
+Run it, it will crash, caused by value interpolation:
+```jshttps://github.com/opudalo/next-astroturf/blob/master/README.md
+import { dark } from '../theme'
+const styles = css`
+  .box { color: ${dark} }
+
+`
+```
+Also, even if you remove it, `css` api doesn't work :(
+
+-------
+
+
+
 # Example app with [astroturf](https://github.com/4Catalyzer/astroturf)
 
 This example features how to use [astroturf](https://github.com/4Catalyzer/astroturf) as the zero-runtime CSS-in-JS styling solution instead of [styled-jsx](https://github.com/zeit/styled-jsx).
