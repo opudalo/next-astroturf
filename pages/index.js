@@ -1,4 +1,16 @@
-import styled from 'astroturf'
+import { css } from 'astroturf'
+import styled from 'astroturf/react'
+
+import { dark } from '../theme'
+
+const styles = css`
+  .red {
+    border: 2px solid ${dark};
+    padding: 10px;
+  }
+`
+
+console.log('>>>', styles)
 
 const Button = styled('button')`
   color: black;
@@ -15,10 +27,14 @@ const Button = styled('button')`
   }
 `
 
+console.log('>>> Button', Button)
+
 const IndexPage = () => (
-  <Button primary color="green">
-    A styled button
-  </Button>
+  <div className={styles.red}>
+    <Button primary color="green">
+      A styled button
+    </Button>
+  </div>
 )
 
 export default IndexPage
